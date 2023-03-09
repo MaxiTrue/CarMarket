@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Spring Security Example </title>
+</head>
+<body>
+<div><a href="/main"> Main page</a></div>
+Add money
+<form action="/money/add" method="post">
+    <div><label> Amount in RUB : <input type="number" name="total" required="true" min="1" value="1" step="0.01"/> </label></div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <div><input type="submit" value="Top up"/></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,7 @@
+com\example\CarMarket\RegistrationController.class
+com\example\CarMarket\Role.class
+com\example\CarMarket\UserRepo.class
+com\example\CarMarket\CarMarketApplication.class
+com\example\CarMarket\config\User.class
+com\example\CarMarket\config\MvcConfig.class
+com\example\CarMarket\GreetingController.class
