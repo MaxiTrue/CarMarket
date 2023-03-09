@@ -36,14 +36,14 @@ public class RegistrationController {
 
             Map<String, String> errors = bindingResult.getFieldErrors().stream().collect(collector);
 
+            //TODO потом переписать нормально
             for (Map.Entry entry: errors.entrySet()){
-                model.put("message", (String) entry.getValue()); // пока так
+                model.put((String) entry.getKey(), (String) entry.getValue());
             }
 
             return "registration";
 
         } else {
-
             boolean userCreated = userService.createUser(newUserDto);
             if (!userCreated) {
                 model.put("message", "User exist!");
